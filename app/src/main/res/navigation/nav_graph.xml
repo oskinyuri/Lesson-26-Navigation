@@ -3,12 +3,72 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@+id/firstFragment">
+    app:startDestination="@id/firstFragment">
 
     <fragment
         android:id="@+id/firstFragment"
         android:name="com.example.lesson_26_navigation.FirstFragment"
-        android:label="Blank"
-        tools:layout="@layout/fragment_first" />
-
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_firstOneFragment"
+            app:destination="@id/firstOneFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_firstTwoFragment"
+            app:destination="@id/firstTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstOneFragment"
+        android:name="com.example.lesson_26_navigation.FirstOneFragment"
+        android:label="fragment_first_one"
+        tools:layout="@layout/fragment_first_one" />
+    <fragment
+        android:id="@+id/firstTwoFragment"
+        android:name="com.example.lesson_26_navigation.FirstTwoFragment"
+        android:label="fragment_first_two"
+        tools:layout="@layout/fragment_first_two" />
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.example.lesson_26_navigation.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_secondFragment_to_secondOneFragment2"
+            app:destination="@id/secondOneFragment" />
+        <action
+            android:id="@+id/action_secondFragment_to_secondTwoFragment"
+            app:destination="@id/secondTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondOneFragment"
+        android:name="com.example.lesson_26_navigation.SecondOneFragment"
+        android:label="fragment_second_one"
+        tools:layout="@layout/fragment_second_one" />
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="com.example.lesson_26_navigation.ThirdFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" >
+        <action
+            android:id="@+id/action_thirdFragment_to_thirdOneFragment"
+            app:destination="@id/thirdOneFragment" />
+        <action
+            android:id="@+id/action_thirdFragment_to_thirdTwoFragment"
+            app:destination="@id/thirdTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdOneFragment"
+        android:name="com.example.lesson_26_navigation.ThirdOneFragment"
+        android:label="fragment_third_one"
+        tools:layout="@layout/fragment_third_one" />
+    <fragment
+        android:id="@+id/thirdTwoFragment"
+        android:name="com.example.lesson_26_navigation.ThirdTwoFragment"
+        android:label="fragment_third_two"
+        tools:layout="@layout/fragment_third_two" />
+    <fragment
+        android:id="@+id/secondTwoFragment"
+        android:name="com.example.lesson_26_navigation.SecondTwoFragment"
+        android:label="fragment_second_two"
+        tools:layout="@layout/fragment_second_two" />
 </navigation>

@@ -2,16 +2,13 @@ package com.example.lesson_26_navigation;
 
 
 import android.os.Bundle;
-import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+import androidx.fragment.app.Fragment;
+
 public class SecondFragment extends Fragment {
 
     private Button mOneBtn;
