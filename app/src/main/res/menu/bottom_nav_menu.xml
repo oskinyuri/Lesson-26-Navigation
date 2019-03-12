@@ -2,6 +2,21 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    
 
+    <item
+        android:id="@+id/one_item_bottom_menu"
+        android:title="One"
+        android:icon="@drawable/ic_accessibility_black_24dp"
+
+        />
+    <item
+        android:id="@+id/two_item_bottom_menu"
+        android:title="Two"
+        android:icon="@drawable/ic_airline_seat_flat_black_24dp"
+        />
+    <item
+        android:id="@+id/three_item_bottom_menu"
+        android:title="Three"
+        android:icon="@drawable/ic_airline_seat_recline_extra_black_24dp"
+        />
 </menu>

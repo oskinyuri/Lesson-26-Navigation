@@ -3,24 +3,42 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".ThirdFragment">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Third fragment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
 
+        android:id="@+id/third_fragment_one_btn"
         style="@style/Widget.MaterialComponents.Button"
-        android:layout_width="wrap_content"
 
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
         android:text="One"
-        app:layout_constraintBottom_toBottomOf="@+id/materialButton"
-        app:layout_constraintEnd_toStartOf="@+id/materialButton"
-        app:layout_constraintTop_toTopOf="@+id/materialButton" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/third_fragment_two_btn" />
 
     <com.google.android.material.button.MaterialButton
 
-        android:id="@+id/materialButton"
+        android:id="@+id/third_fragment_two_btn"
         style="@style/Widget.MaterialComponents.Button"
 
         android:layout_width="wrap_content"
@@ -31,5 +49,4 @@
         android:text="Two"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
