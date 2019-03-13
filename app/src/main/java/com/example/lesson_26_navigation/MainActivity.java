@@ -5,6 +5,7 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -23,11 +24,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mNavController = Navigation.findNavController(this, R.id.nav_fragment_host);
-        mAppBarConfiguration = new AppBarConfiguration.Builder(mNavController.getGraph()).build();
+        mAppBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.firstFragment,
+                R.id.secondFragment,
+                R.id.thirdFragment
+                ).build();
+
+
         NavigationUI.setupActionBarWithNavController(this, mNavController, mAppBarConfiguration);
 
         mBottomNavigationView = findViewById(R.id.bottomNavigationView);
-        NavigationUI.setupWithNavController(mBottomNavigationView,mNavController);
+        NavigationUI.setupWithNavController(mBottomNavigationView, mNavController);
+
+        mBottomNavigationView.setOnNavigationItemSelectedListener(item ->
+                NavigationUI.onNavDestinationSelected(item, mNavController));
     }
 
     @Override

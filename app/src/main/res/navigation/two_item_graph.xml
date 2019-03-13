@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/two_item_graph"
+    app:startDestination="@id/secondFragment2">
+
+    <fragment
+        android:id="@+id/secondFragment2"
+        android:name="com.example.lesson_26_navigation.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_secondFragment2_to_secondOneFragment2"
+            app:destination="@id/secondOneFragment2" />
+        <action
+            android:id="@+id/action_secondFragment2_to_secondTwoFragment2"
+            app:destination="@id/secondTwoFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondOneFragment2"
+        android:name="com.example.lesson_26_navigation.SecondOneFragment"
+        android:label="fragment_second_one"
+        tools:layout="@layout/fragment_second_one" />
+    <fragment
+        android:id="@+id/secondTwoFragment2"
+        android:name="com.example.lesson_26_navigation.SecondTwoFragment"
+        android:label="fragment_second_two"
+        tools:layout="@layout/fragment_second_two" />
+</navigation>
