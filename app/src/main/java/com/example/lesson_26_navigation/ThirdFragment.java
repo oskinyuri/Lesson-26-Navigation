@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 public class ThirdFragment extends Fragment {
 
@@ -23,14 +24,12 @@ public class ThirdFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_third, container,false);
 
         mOneBtn = view.findViewById(R.id.third_fragment_one_btn);
-        mOneBtn.setOnClickListener(view1 -> {
-
-        });
+        mOneBtn.setOnClickListener(Navigation.createNavigateOnClickListener(
+                R.id.action_thirdFragment_to_thirdOneFragment, null));
 
         mTwoBtn = view.findViewById(R.id.third_fragment_two_btn);
-        mTwoBtn.setOnClickListener((view1 -> {
-
-        }));
+        mTwoBtn.setOnClickListener(Navigation.createNavigateOnClickListener(
+                R.id.action_thirdFragment_to_thirdTwoFragment, null));
 
         return view;
     }

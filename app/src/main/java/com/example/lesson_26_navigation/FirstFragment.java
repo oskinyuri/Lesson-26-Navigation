@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.NavigationUI;
 
 public class FirstFragment extends Fragment {
 
@@ -23,19 +25,17 @@ public class FirstFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_first, container,false);
+        View view = inflater.inflate(R.layout.fragment_first, container, false);
 
         mOneBtn = view.findViewById(R.id.first_fragment_one_btn);
-        mOneBtn.setOnClickListener(view1 -> {
-
-        });
+        mOneBtn.setOnClickListener(Navigation.createNavigateOnClickListener(
+                R.id.action_firstFragment_to_firstOneFragment, null));
 
         mTwoBtn = view.findViewById(R.id.first_fragment_two_btn);
-        mTwoBtn.setOnClickListener((view1 -> {
-
-        }));
+        mTwoBtn.setOnClickListener(Navigation.createNavigateOnClickListener(
+                R.id.action_firstFragment_to_firstTwoFragment, null));
 
         return view;
-    }
+}
 
 }
